@@ -27,7 +27,7 @@ if (isset($_POST['search'])) {
         ];
 
         while ($callDetails = mysqli_fetch_array($callLogsDetailsResults)) {
-            if ($callLogs['callId'] == $callDetails['id']) {
+            if ($callLogs['callId'] == $callDetails['callId']) {
                 $logDetails[] = [
                     'id' => $callDetails['id'],
                     'callId' => $callDetails['callId'],
@@ -79,7 +79,6 @@ if (isset($_POST['search'])) {
                           <th scope='col' class='px-6 py-3'>Details</th>
                           <th scope='col' class='px-6 py-3'>Hours</th>
                           <th scope='col' class='px-6 py-3'>Minutes</th>
-                          <th scope='col' class='px-6 py-3'>Action</th>
                         </tr>
                       </thead>";
                 echo '<tbody>';
@@ -89,11 +88,6 @@ if (isset($_POST['search'])) {
                 echo '<td class="px-6 py-4">' . $logDetail['details'] . '</td>';
                 echo '<td class="px-6 py-4">' . $logDetail['hours'] . '</td>';
                 echo '<td class="px-6 py-4">' . $logDetail['minutes'] . '</td>';
-                echo "<td class='px-6 py-4'>
-                <a href='delete.php?id=$logDetail[id]&hours=$logDetail[hours]&minutes=$logDetail[minutes]&callId=$logDetail[callId] ' class='text-red-600'>
-                    Delete
-                </a>
-                </td>";
             }
         }
     }
