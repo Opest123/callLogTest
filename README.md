@@ -1,8 +1,8 @@
 # callLogTest
 A PHP Test
 
-Build Project
+Build Project:
 php -S localhost:8080
 
-DB is 
+DB: 
 call_logs.sql
