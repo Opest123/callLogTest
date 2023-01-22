@@ -3,10 +3,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+    <script src="https://cdn.tailwindcss.com"></script>
 
     <title>
-        {{ config('app.name', 'Welcome') }}
+        Call Logs
     </title>
 
     <!-- Fonts -->
@@ -402,10 +402,9 @@
             font-family: 'Nunito', sans-serif;
         }
     </style>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 </head>
-<header>
-    <h1>
-        Call Logs
-    </h1>
-</header>
-<div id="contents">
+<body class="mx-auto px-4 py-4">
+<div id="app">
+
