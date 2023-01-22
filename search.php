@@ -40,6 +40,7 @@ if (isset($_POST['search'])) {
         }
     }
 
+    echo file_get_contents("view/header.html.php");
     echo "<table class='w-full text-sm text-left text-gray-500 dark:text-gray-400'>
   <thead class='text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400'>
     <tr>
@@ -94,5 +95,6 @@ if (isset($_POST['search'])) {
     echo '</tbody>';
     echo "</table>";
     echo "</table>";
+    echo file_get_contents("view/footer.html.php");
 }
 ?>
